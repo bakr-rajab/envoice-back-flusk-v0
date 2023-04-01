@@ -1,0 +1,59 @@
+{
+    "invoice": [
+        "invoice_type",
+        "date",
+        "client",
+        "payment_type",
+        "branch",
+        "discount_ratio",
+        "discount_value",
+        "total_invoice",
+        "notes",
+        "invoice_types",
+        "total_added_tax",
+        "total_comm_tax",
+        "total_before_taxes",
+        "country",
+        "total_after_comm_tax",
+        "deduction_value",
+        "type_comm_ratio"
+    ],
+    "invoice_type": [
+        "total_money_type",
+        "amount",
+        "invoice_type_id",
+        "type_tax_percentage",
+        "type_added_tax",
+        "type_comm_tax",
+        "type_comm_ratio"
+    ],
+    "type": [
+        "account_type_code",
+        "type_name",
+        "tax_code_type",
+        "tax_code",
+        "type_group",
+        "unit_of_measurment",
+        "tax_type",
+        "tax_percentage",
+        "price"
+    ],
+    "type_group": [
+        "group_name_ar",
+        "group_name_en"
+    ],
+    "branch": [
+        "branch_name_en",
+        "brnach_name_ar",
+        "invoice_counter",
+        "account_branch_code"
+    ],
+    "client": [
+        "client_name",
+        "ph_number",
+        "email",
+        "tax_number",
+        "client_code_number",
+        "address"
+    ]
+}

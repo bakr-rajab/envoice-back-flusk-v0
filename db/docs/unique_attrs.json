@@ -1,0 +1,16 @@
+{
+    "user":["tax_number", "user_id"],
+    "types":["type_code"],
+    "measurement_units": ["code"],
+    "tax_types": ["code"],
+    "types_groups": ["group_code"],
+    "clients": ["tax_number"],
+    "branches": ["branch_code"],
+    "commercial_activities ": ["code"],
+    "invoice":["invoice_code"],
+    "invoice_report" : ["report_code"],
+    "invoice_type" : ["invoice_type_code"],
+    "license":["license_id"],
+    "plans":["plan_id","plan_name"],
+    "countries":["code"]
+}

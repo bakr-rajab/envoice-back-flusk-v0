@@ -1,0 +1,1 @@
+from .static_table_core import StaticTableCore

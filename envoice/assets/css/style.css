@@ -1,0 +1,70 @@
+
+ *, *::before, *::after {
+     box-sizing: border-box;
+}
+ @media (prefers-reduced-motion: no-preference) {
+     :root {
+         scroll-behavior: smooth;
+    }
+}
+ html, body {
+     height: 100%;
+     overflow-x: hidden;
+}
+ body {
+     margin: 0;
+     direction: rtl;
+     text-align: right;
+     font-family: var(--font-family-regular);
+}
+
+/***dashboard cards***/
+
+/***Dashborad Cards***/
+.card.card-img-holder {
+    position: relative;
+    height:180px;
+    max-height:180px;
+  }
+  .card.card-img-holder .card-img-absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: rotateY(180deg);
+  }
+  .card.card-img-holder .card-body h2{
+    font-family: var(--font-family-bold);
+    font-size:25px;
+    color:var(--white-color);
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
+  .card.card-img-holder .card-body h6{
+    font-family: var(--font-family-bold);
+    font-size:20px;
+    color:var(--white-color)
+  }
+  .card.card-img-holder .card-body svg{
+    color:var(--white-color);
+    font-size:25px;
+  }
+  .bg-gradient-danger {
+    background: -webkit-gradient(linear, right top, left top,
+     from(#ffbf96), to(#fe7096)) !important;
+    background: linear-gradient(to left, #ffc107, #d16d1a) !important;
+  }
+  .bg-gradient-info {
+    background: -webkit-gradient(linear, right top, left top, from(#90caf9), color-stop(99%, #047edf)) !important;
+    background: linear-gradient(to left, #90caf9, #047edf 99%) !important;
+  }
+  .bg-gradient-success {
+    background: -webkit-gradient(linear, right top, left top, from(#84d9d2), to(#07cdae)) !important;
+    background: linear-gradient(to left, #84d9d2, #07cdae) !important;
+  }
+  .bg-gradient-purble {
+    background: -webkit-gradient(linear, right top, left top, from(#f5859a), to(#db0e34));
+    background: linear-gradient(to left, #f5859a, #db0e34);
+  }
+
+

@@ -1,0 +1,44 @@
+.main-form{
+    text-align:right;
+    direction: rtl;
+}
+.main-form .form-floating>label{
+    right:-10px;
+    left:auto !important;
+    font-family: var(--font-family-regular);
+}
+.main-form .form-floating>.form-control:focus~label,
+.main-form .form-floating>.form-control:not(:placeholder-shown)~label, 
+.main-form .form-floating>.form-select~label {
+    opacity: .65;
+    transform: scale(0.85) translateY(-0.8rem) translateX(0.15rem);
+}
+.main-form .form-select {
+    padding:15px 15px 5px 5px;
+    background-position: left 0.75rem center !important;
+}
+
+.main-details {
+    background: #6ad6ab4d;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 15px;
+}
+.main-details h4{
+    color: var(--main-color);
+    font-family: var(--font-family-bold);
+    font-size: 19px;
+}
+.main-details h4 span{
+    color: var(--dark-gery-color);
+
+}
+
+.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+    margin-right: -1px;
+    margin-left: 0 !important;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}

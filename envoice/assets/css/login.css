@@ -1,0 +1,55 @@
+
+/****Start Login****/
+.form-login {
+    width: 450px;
+    max-width: 450px;
+    padding: 35px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 60px 0 rgba(29,29,31,.09);
+    background-color: #fff;
+}
+.form-login .form-control::-ms-input-placeholder {
+    color: #fff;
+    font-size: 13px;
+}
+.form-login .form-control::-moz-placeholder {
+    color: #fff;
+    font-size: 13px;
+}
+.form-login button[type="submit"] {
+    color: #fff;
+    background-image: linear-gradient( -20deg,#0d7538 0, #22c18b 100%);
+    background-color: #35d357;
+    border-radius: 30px;
+    width: 90%;
+    margin: auto;
+    font-family: var(--font-family-bold);
+    font-size: 20px;
+}
+.form-login button[type="submit"] a{
+ color: var(--white-color);
+ text-decoration: none;
+}
+.form-login .form-floating>label{
+    left: auto !important;
+    right:0;
+    color: var(--main-color);
+    font-family: var(--font-family-regular);
+    font-size: var(--font-size-label);
+}
+.form-login .form-floating>.form-control:focus, .form-login .form-floating>.form-control:not(:placeholder-shown) {
+    padding-right: 20px;
+}
+.form-login .form-floating>.form-control:focus~label, .form-login .form-floating>.form-control:not(:placeholder-shown)~label, .form-login .form-floating>.form-select~label{
+    opacity: 0.9;
+}
+@media only screen and (max-width : 768px) {
+    .form-login{
+        width: 100%;
+        max-width: 100%;
+        margin-right: 15px;
+        margin-left: 15px 
+   }
+}
+/****End Login****/

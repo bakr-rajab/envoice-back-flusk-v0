@@ -1,0 +1,49 @@
+/******fONTS*********/
+/**Regular **/
+@font-face {
+    font-family: 'HelveticaNeueW23forSKY-Regular';
+    src:url('../fonts/regular/HelveticaNeueW23forSKY-Reg.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/**Bold**/
+@font-face {
+    font-family: 'HelveticaNeueW23forSKY-Bold';
+    src:url('../fonts/bold/HelveticaNeueW23forSKY-Bd.ttf') format('truetype');
+    font-weight: bold;
+    font-style: bold;
+}
+:root {
+    --main-color:#41979a;
+    --white-color:#ffffff;
+    --black-color:#000000;
+    --dark-gery-color:#555050;
+    --danger-color:#f13232;
+    --orange-color: #f69545;
+    --blue-color:#5bc0de;
+    --font-family-bold: 'HelveticaNeueW23forSKY-Bold';
+    --font-family-regular: 'HelveticaNeueW23forSKY-Regular';
+    --font-size-label:15px;
+    --font-page-size:30px
+}
+.card{
+    width: 100%;
+    min-width: 100%;
+    border: 0;
+    border-radius: 10px;
+}
+
+.page-title{
+    font-family: var(--font-family-bold);
+    font-size:var(--font-page-size) !important;
+    margin-bottom: 20px;
+    color:var(--dark-gery-color)
+}
+.inner-title h2{
+    font-family: var(--font-family-bold);
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--dark-gery-color);
+    margin-top: 50px;
+}
+

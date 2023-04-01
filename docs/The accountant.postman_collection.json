@@ -1,0 +1,1606 @@
+{
+	"info": {
+		"_postman_id": "589474cd-08b5-482a-b40f-8de308021e17",
+		"name": "The accountant",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "client_apis",
+			"item": [
+				{
+					"name": "client_create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"client\",\n\"action\":\"create\",\n\"client_name\": \"mahmoud\",\n\"ph_number\": 444212211,\n\"email\": \"the_best@ismaiel.com\",\n\"tax_number\": 788787878787,\n\"user_id\":\"170474f5030c487c93f59296d99b4def\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edite_client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"client\",\n\"action\":\"edite\",\n\"unique_value\":{\n    \"tax_number\":788787878787\n},\n\"client_name\": \"mahmoud\",\n\"ph_number\": 12212121,\n\"email\": \"7amoda@ismaiel.com\",\n\"tax_number\": 788787878733387\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"client\",\n\"action\":\"delete\",\n\"key\":\"tax_number\",\n\"value\":\"788787878787\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "select_client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"client\",\n\"action\":\"get_client\",\n\"tax_number\":788787878733387,\n\"user_id\":\"170474f5030c487c93f59296d99b4def\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_clients",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"client\",\n\"action\":\"get_all_clients\",\n\"user_id\":\"170474f5030c487c93f59296d99b4def\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "branch_apis",
+			"item": [
+				{
+					"name": "create_branch",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"branch\",\n\"action\":\"create\",\n\"branch_name_en\":\"tabby\",\n\"brnach_name_ar\":\"التابعي\",\n\"user_id\":\"170474f5030c487c93f59296d99b4def\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit_branch",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"branch\",\n\"action\":\"edite\",\n\"unique_value\":{\n    \"branch_code\":\"1a20373eedb844d2bb30b0c3695e1888\"\n},\n\"branch_name_en\":\"tabby\",\n\"brnach_name_ar\":\"التابعي\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_branch",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"branch\",\n\"action\":\"delete\",\n\"key\":\"branch_code\",\n\"value\":\"1a20373eedb844d2bb30b0c3695e1888\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_spacific_branch",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"branch\",\n    \n\"action\":\"get_branch\",\n\"branch_code\":\"3e9aa09488fb453a80f7f316fe93a49c\",\n\"user_id\":\"170474f5030c487c93f5296d99b4def\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_branches",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"branch\",\n\n\"action\":\"get_all_branchs\",\n\"user_id\":\"170474f5030c487c93f5296d99b4def\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "invoice",
+			"item": [
+				{
+					"name": "invoice_create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"invoice\",\n\"action\":\"create\",\n\"date\":\"2022-11-06\",\n\"client\":788787878733387,\n\"payment_type\":\"cash\",\n\"branch\":\"9856fc158f794b05987cc3815afe617d\",\n\"discount_ratio\":0.1,\n\"total_invoice\":2000,\n\"notes\":\"helllo\",\n\"invoice_types\":[\"390a3dc288694a7f96d3d0d25a3d3fda\", \"390a3dc288694a7f96d3d0d25a3d3fda\",\"390a3dc288694a7f96d3d0d25a3d3fda\"],\n\"user_id\":\"170474f5030c487c93f59296d99b4def\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_invoice_type",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"invoice_type\",\n\"action\":\"create\",\n\"total_money_type\":5000,\n\"amount\":6,\n\"invoice_type_id\":70,\n\"invoice_id\":\"d1832395ff5b4580b77ea6f7a2a33dd7\", \n\"user_id\": \"170474f5030c487c93f59296d99b4def\",\n\"report_id\":null \n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_invoice_report",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"invoice_report\",\n\"action\":\"create\",\n\"date\":\"2022-11-02\",\n\"report_type\":\"discount\", \n\"invoice_id\":\"90cfe72ee28546f58b9fbee9e33d76bf\",\n\"notes\":\"hello\",\n\"invoice_types\":[\"0dae5287fdfb411fb8ff5ca6db331f43\"], \n\"user_id\":\"170474f5030c487c93f59296d99b4def\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_invoice_type",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"invoice_type\",\n\"action\":\"get_invoice_type\",\n\"invoice_type_code\":\"3eb19646b2f3415a8895d34f210a70e3\",\n\"user_id\":\"170474f5030c487c93f59296d99b4def\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_invoice_types",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"invoice_type\",\n\"action\":\"get_all_invoices_type\",\n\"user_id\":\"170474f5030c487c93f59296d99b4def\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_spacific_invoice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"invoice\",\n\"action\":\"invoice_full_info\",\n\"invoice_code\":\"0205c7c923c64e73801eda700c1d8690\",\n\"user_id\":\"170474f5030c487c93f59296d99b4def\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_sepcific_invoice_without_invoice_types",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"invoice\",\n\"action\":\"get_invoice\",\n\"invoice_code\":\"0205c7c923c64e73801eda700c1d8690\",\n\"user_id\":\"170474f5030c487c93f59296d99b4def\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_invoices",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"invoice\",\n\"action\":\"get_all_invoices\",\n\"user_id\":\"170474f5030c487c93f59296d99b4def\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_invoice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"invoice\",\n\n\"action\":\"delete\",\n\"key\":\"invoice_code\",\n\"value\":\"857a1fddc77446c5a0db216a7ff1410c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_invoice_type",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"invoice_type\",\n\n\"action\":\"delete\",\n\"key\":\"invoice_type_code\",\n\"value\":\"f2e0f31c97764eddb84487e92e938b27\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_invoice_report",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"invoice_report\",\n\"action\":\"delete\",\n\"key\":\"report_code\",\n\"value\":\"bc0f60c24f644913ba95001e6b9bcb7b\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_invoice_reports",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"invoice_report\",\n\"action\":\"get_all_invoices_report\",\n\"user_id\":\"170474f5030c487c93f59296d99b4def\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_spacific_report",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"invoice_report\",\n\n\"action\":\"get_invoice_report\",\n\"report_code\":\"2c30023632644cbb80422177e686921b\",\n\"user_id\":\"170474f5030c487c93f59296d99b4def\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_sent_invoice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"target\":\"invoice\",\n    \"action\":\"delete_sent\",\n    \"invoice_code\":\"ff68c58885a14917b5ba676d3409bd49\",\n    \"user_id\":\"170474f5030c487c93f59296d99b4def\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "export_invoice_report",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"target\":\"invoice\",\n    \"action\":\"export_invoice_report\",\n    \"invoice_report_type\":\"general\",\n    \"start_date\":\"2022-11-02\",\n    \"end_date\":\"2022-11-07\",\n    \"file_path\":\"/home/mahmoudhfahmy/data\",\n    \"user_id\":\"170474f5030c487c93f59296d99b4def\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "type",
+			"item": [
+				{
+					"name": "create_type_group",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"type_group\",\n\"action\":\"create\",\n\"group_name_ar\": \"تابلوهات\",\n\"group_name_en\": \"tablooos\",\n\"user_id\":\"170474f5030c487c93f59296d99b4def\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_type_group",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"type_group\",\n\"action\":\"get_type_group\",\n\"group_code\":\"9387782654074ceea4aacda5407da34a\",\n\"user_id\":\"170474f5030c487c93f59296d99b4def\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_types_groups",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"type_group\",\n\"action\":\"get_all_types_groups\",\n\"user_id\":\"683132fae66f44fc8bb545274dd7939b\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_type",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"type\",\n\"action\":\"create\",\n\"type_code\":70,\n\"type_name\":\"tablohat\",\n\"tax_code\": 1231231,\n\"type_group\":\"80492f7ee47344068aac02dded8a8a1c\",\n\"unit_of_measurment\": \"BOX\",\n\"tax_type\":\"T1\",\n\"tax_percentage\":2,\n\"price\":30000,\n\"user_id\":\"170474f5030c487c93f59296d99b4def\" \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit_type",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"type\",\n\n\"action\":\"edite\",\n\"unique_value\":{\n    \"type_code\":44\n},\n\"type_name\":\"tablohat\",\n\"tax_code\": 1231231,\n\"type_group\":\"d51d88d5334a442b8a4636411e889f4e\", \n\"unit_of_measurment\": \"wa7da\",\n\"tax_type\":3,\n\"tax_percentage\":2,\n\"price\":30000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_type",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"type\",\n\n\"action\":\"delete\",\n\"key\":\"type_code\",\n\"value\":44\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_type",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"type\",\n\"action\":\"get_all_types\",\n\"invoice_type_code\":\"\",\n\"user_id\":\"683132fae66f44fc8bb545274dd7939b\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_types",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"type\",\n\"action\":\"get_all_types\",\n\"user_id\":\"683132fae66f44fc8bb545274dd7939b\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_type_group",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"type_group\",\n\"action\":\"delete\",\n\"key\":\"group_code\",\n\"value\":\"d376ea490ae345a6a5a14f777335f4c9\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edite_type_group",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"type_group\",\n\n\"action\":\"edit\",\n\"unique_value\":{\n    \"group_code\":\"00947fecfc594412af783a3f7410b4ca\"\n},\n\"group_name_ar\": \"تابلوهات\",\n\"group_name_en\": \"rrrrr\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user_apis",
+			"item": [
+				{
+					"name": "create_user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"user\",\n\"action\":\"create\",\n\"email\":\"W@gmail.com\",\n\"password\":\"12234\",\n\"tax_number\":8188,\n\"activity_code\":\"2220999\",\n\"ph_number\":6663777766\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "auth_user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"user\",\n\"action\":\"auth\",\n\"tax_number\":8188,\n\"password\":\"12234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edite_user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"user\",\n\"action\":\"edit\",\n\"unique_value\":{\n    \"tax_number\":888\n},\n\n\"name\":\"mahmoud\",\n\"ph_number\":555555,\n\"email\":\"goniem_for@gmail.com\",\n\"password\":\"1345\",\n\"tax_num\":1123333232222,\n\"activity_code\":999,\n\"adress\":\"9-fil sr\",\n\"token_one\":\"1212\",\n\"token_two\":\"3333\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"target\":\"user\",\n    \"action\":\"delete\",\n    \"key\":\"user_id\",\n    \"value\":\"73c18eb2b0464559884133db3b44cdb8\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_spacific_user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"target\":\"user\",\n    \"action\":\"get_user\",\n    \"user_id\":\"97cc6352bf2e4890aad98f31d6829b00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"user\",\n\"action\":\"get_all_users\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "static_data",
+			"item": [
+				{
+					"name": "get_spacific_data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"static\",\n\"action\":\"get_element\",\n\"table_name\":\"tax_types\",\n\"code\":\"T1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"target\":\"static\",\n\"action\":\"get_all_elements\",\n\"table_name\":\"commercial_activities\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"target\":\"static\",\n    \"action\":\"create\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "plan_apis",
+			"item": [
+				{
+					"name": "create_plan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"target\":\"plan\",\n    \"action\":\"create\",\n    \"plan_name\":\"6months\",\n    \"plan_duration\":90\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit_plan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"target\":\"plan\",\n    \"action\":\"edit\",\n    \"unique_value\":{\n        \"plan_id\":\"0901152dee75438889d7a0e4a66cd3a2\"\n    },\n    \"plan_name\":\"62month\",\n    \"plan_duration\":90\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_plan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"target\":\"plan\",\n    \"action\":\"get_plan\",\n    \"plan_id\":\"62c9ab92f2ba4c448f83ac68b729be01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_plans",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"target\":\"plan\",\n    \"action\":\"get_all_plans\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_plan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"target\":\"plan\",\n    \"action\":\"delete\",\n    \"key\":\"plan_id\",\n    \"value\":\"0901152dee75438889d7a0e4a66cd3a2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "license_apis",
+			"item": [
+				{
+					"name": "create_license",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"target\":\"license\",\n    \"action\":\"create\",\n    \"user_id\":\"b6cab0ae7b9a41abb5ef93d43ac8b46b\",\n    \"plan_id\":\"c881a297c71845b987a46dd5ddd26349\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_license",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"target\":\"license\",\n    \"action\":\"get_license\",\n    \"license_id\":\"087f630d43c34419a53d58f4efe6f1ae\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_license",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"target\":\"license\",\n    \"action\":\"get_all_licenses\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_license",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"target\":\"license\",\n    \"action\":\"delete\",\n    \"key\":\"license_id\",\n    \"value\":\"6629ff0b65b94908b0d0f9c8bf2444cc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8500/api/inbound",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8500",
+							"path": [
+								"api",
+								"inbound"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}

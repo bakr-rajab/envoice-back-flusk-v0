@@ -1,0 +1,67 @@
+.btn.btn-success{
+    background-color: #4eb09b;
+}
+.btn{
+    font-family: var(--font-family-regular);
+    font-size: 17px;
+    padding: 8px 30px;
+}
+.btn.btn-outline-success{
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    text-decoration: none;
+}
+.btn.btn-outline-success a{
+    color: var(--main-color);
+}
+.btn.btn-outline-success:hover ,
+.btn.btn-outline-success:focus {
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
+.btn.btn-outline-success:hover a,
+.btn.btn-outline-success:focus a{
+    color: var(--white-color) !important;
+}
+.link-outlined{
+    color: var(--main-color);
+    text-decoration: none;
+    font-family: var(--font-family-bold);
+    font-size:20px;
+    position: relative;
+}
+.link-outlined::after{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: var(--main-color);
+    display: block;
+}
+
+.link-outlined:hover  ,
+ .link-outlined:visited , .link-outlined:focus{
+    color: var(--main-color);
+}
+.main-buttons{
+    margin-top:35px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.main-buttons .btn:not(:last-child){
+    margin-left: 15px;
+}
+.btn a , .btn-outline-success a{
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+}
+.main-buttons .btn-save{
+    background-image: linear-gradient(87deg,#5ac99d, #41979a 99%);
+    color: var(--white-color);
+}
+.main-buttons .btn-exit{
+    background-image: linear-gradient(87deg,var(--orange-color), var(--bs-yellow) 99%);
+    color: var(--white-color);
+}

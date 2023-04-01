@@ -1,0 +1,14 @@
+[Unit]
+Description=Inbound service for Accountant
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/accountantnlu/the_accountant/
+ExecStart=/home/accountantnlu/the_accountant/inbound_integration.sh
+Restart=on-abort
+OnFailure=/home/accountantnlu/the_accountant/inbound_integration.sh
+
+[Install]
+WantedBy=default.target
+Alias=inbound.service

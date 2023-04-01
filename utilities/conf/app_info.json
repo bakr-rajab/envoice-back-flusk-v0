@@ -1,0 +1,11 @@
+{
+    "application_data":{
+        "APPLICATION_IP":"localhost",
+        "APPLICATION_PORT":"8000"
+    },
+    "database_data":{
+        "DATABASE_IP": "localhost",
+        "DATABASE_PORT": 27017,
+        "DATABASE_NAME": "accountant_db"
+    }
+}

@@ -1,0 +1,616 @@
+//// User apis //////s
+
+// /api/inbound/
+// request
+
+{
+"target":"user",
+"action":"auth",
+"email":"mahmoud@gmail.com",
+"password":"1234"
+},
+
+// /api/create_user/
+// request
+
+{
+"target":"user",
+"action":"create",
+"email":"mahmoud@gmail.com",
+"password":"1234",
+},
+
+// /api/edit_user/
+
+// all of those can be empty is required but you can let toke_one, and toke_two not required as it depend on the connection between system and tax system
+// request
+
+{
+"target":"user",
+"action":"edit",
+"unique_value":{
+    "email":"mahmoud@gmail.com" // or "ph_number":112154224 or "user_id": "123asdajskueawrhwqier2783"
+},
+
+"name":"mahmoud",
+"ph_number":112154224,
+"email":"7oda@istnetworks.com",
+"password":"1345",
+"tax_num":112232222,
+"activity_code":999,
+"adress":"9-fil sr",
+"token_one":"1212",
+"token_two":"3333"
+},
+
+// /api/get_users/
+// request
+{
+"target":"user",
+"action":"get_all_users",
+},
+
+// /api/search_user/
+// request
+
+{
+    "target":"user",
+    "action":"get_user",
+    "user_id":"dfkmasd12312lksfklaelkqj312j"
+}
+
+// /api/delete_user/
+// request
+{
+    "target":"user",
+    "action":"delete",
+    "key":"user_id",
+    "value":"dfkmasd12312lksfklaelkqj312j"
+}
+
+{
+    "target":"user"
+}
+//////// Client Apis //////
+
+// /api/create_client/
+// request
+
+{
+"target":"client",
+"action":"create",
+"client_name": "mahmoud",
+"ph_number": 12212121,
+"email": "7oda@ismaiel.com",
+"tax_number": 12222223,
+"user_id":"170474f5030c487c93f59296d99b4def"
+}
+
+// /api/edit_client/
+// request
+
+{
+"target":"client",
+
+"action":"edite",
+"unique_value":{
+    "email":"7oda@ismaiel.com" // or "tax_number":12222223
+},
+"client_name": "mahmoud",
+"ph_number": 12212121,
+"email": "7oda@ismaiel.com",
+"tax_number": 12222223,
+}
+
+
+// /api/delete_client/
+// request
+
+{
+"target":"client",
+"action":"delete",
+"key":"email", //or tax_number
+"value":"7oda@ismaiel.com" // 12222223
+}
+
+// /api/get_all_clients/
+// request
+
+{
+"target":"client",
+"action":"get_all_clients",
+"user_id":"170474f5030c487c93f59296d99b4def"
+}
+
+
+// /api/get_client/
+// request
+
+{
+"target":"client",
+"action":"get_client",
+"client_email":"7oda@ismaiel.com",
+"client_tax_num":"12222223",
+"user_id":"170474f5030c487c93f59296d99b4def"
+}
+
+/////////// branches api //////
+
+// /api/create_branch/
+// request
+
+{
+"target":"branch",
+
+"action":"create",
+"branch_name_en":"tabby",
+"brnach_name_ar":"التابعي",
+"user_id":"170474f5030c487c93f5296d99b4def"
+}
+
+// /api/edit_branch/
+// request
+
+{
+"target":"branch",
+
+"action":"edite",
+"unique_value":{
+    "branch_code":"asjkdAHKHAJSFG123123"
+},
+"branch_name_en":"tabby",
+"brnach_name_ar":"التابعي",
+}
+
+
+// /api/delete_branch/
+// request
+
+{
+"target":"branch",
+
+"action":"delete",
+"key":"branch_code",
+"value":"asjkdAHKHAJSFG123123"
+}
+
+// /api/get_all_branch/
+// request
+
+{
+"target":"branch",
+
+"action":"get_all_branchs",
+"user_id":"170474f5030c487c93f59296d99b4def"
+}
+
+
+// /api/get_branch/
+// request
+
+{
+"target":"branch",
+    
+"action":"get_branch",
+"branch_code":"asjkdAHKHAJSFG123123",
+"user_id":"170474f5030c487c93f59296d99b4def"
+}
+
+/// static data
+
+// /api/get_element/
+// request
+
+
+{
+"target":"static",
+
+"action":"get_element",
+"table_name":"commercial_activities", // or countries or measurement_units or tax_types
+"code":"0999"
+}
+
+
+// /api/get_all_elements/
+// request
+
+{
+"target":"static",
+
+"action":"get_all_elements",
+"table_name":"commercial_activities", // or countries or measurement_units or tax_types
+}
+
+//////// types /////
+
+
+// /api/create_type/
+// request
+
+{
+"target":"type",
+
+"action":"create",
+"type_code":3,
+"type_name":"tablohat",
+"tax_code": 1231231,
+"type_group":2, // linked with type_groups
+"unit_of_measurment": "wa7da",
+"tax_type":3, // linked with tax type from static data
+"tax_percentage":2,
+"price":30000,
+"user_id":"170474f5030c487c93f59296d99b4def" // linked with user table
+}
+
+// /api/edit_type/
+// request
+
+{
+"target":"type",
+
+"action":"edite",
+"unique_value":{
+    "type_code":3
+},
+"type_code":3,
+"type_name":"tablohat",
+"tax_code": 1231231,
+"type_group":2, // linked with type_groups
+"unit_of_measurment": "wa7da",
+"tax_type":3, // linked with tax type from static data
+"tax_percentage":2,
+"price":30000,
+}
+
+
+// /api/delete_type/
+// request
+
+{
+"target":"type",
+
+"action":"delete",
+"key":"type_code",
+"value":3
+}
+
+// /api/get_all_types/
+// request
+
+{
+"target":"type",
+
+"action":"get_all_types",
+"user_id":"170474f5030c487c93f59296d99b4def"
+}
+
+
+// /api/get_type/
+// request
+
+{
+"target":"type",
+
+"action":"get_type",
+"type_code":"asjkdAHKHAJSFG123123",
+"user_id":"170474f5030c487c93f59296d99b4def"
+}
+
+//////// types_group /////
+
+// /api/create_type_group/
+// request
+
+{
+"target":"type_group",
+
+
+"action":"create",
+"group_name_ar": "تابلوهات",
+"group_name_en": "tablooos",
+"user_id":"170474f5030c487c93f59296d99b4def" // linked with user table
+}
+
+// /api/edit_type_group_group/
+// request
+
+{
+"target":"type_group",
+
+"action":"edit",
+"unique_value":{
+    "group_code":"alsjfl234kj23kj143kkfhajs"
+},
+"group_name_ar": "تابلوهات",
+"group_name_en": "tablooos",
+}
+
+
+// /api/delete_type_group/
+// request
+
+{
+"target":"type_group",
+
+"action":"delete",
+"key":"group_code",
+"value":"alsjfl234kj23kj143kkfhajs"
+}
+
+// /api/get_all_types_groups/
+// request
+
+{
+"target":"type_group",
+
+"action":"get_all_types_groups",
+"user_id":"170474f5030c487c93f59296d99b4def"
+}
+
+
+// /api/get_type_group/
+// request
+
+{
+"target":"type_group",
+
+"action":"get_type_group",
+"group_code":"alsjfl234kj23kj143kkfhajs",
+"user_id":"170474f5030c487c93f59296d99b4def"
+}
+
+
+//// invoice ///
+
+// /api/create_invoice/
+{
+"target":"invoice",
+"action":"create",
+"date":"2022-11-02",
+"client":12, // client_id
+"payment_type":"cash",
+"discount_ratio":0.1,
+"total_invoice":2000,
+"notes":"helllo",
+"invoice_types":[12,33,44,2], // ids from invoice_type table
+"user_id":"170474f5030c487c93f59296d99b4def",
+}
+
+
+// /api/edit_invoice/
+// request
+
+{
+"target":"invoice",
+
+"action":"edit",
+"unique_value":{
+    "invoice_code":"alsjfl234kj23kj143kkfhajs"
+},
+"date":"2022-11-02",
+"client":12, // client_id
+"payment_type":"cash",
+"discount_ratio":0.1,
+"total_invoice":2000,
+"notes":"helllo",
+"invoice_types":[12,33,44,2],
+}
+
+
+// /api/delete_invoice/
+// request
+
+{
+"target":"invoice",
+
+"action":"delete",
+"key":"invoice_code",
+"value":"alsjfl234kj23kj143kkfhajs"
+}
+
+// /api/get_all_invoices/
+// request
+
+{
+"target":"invoice",
+
+"action":"get_all_invoices",
+"user_id":"170474f5030c487c93f59296d99b4def"
+}
+// /api/get_invoice/
+// request
+{
+"target":"invoice",
+
+"action":"get_invoice",
+"invoice_code":"alsjfl234kj23kj143kkfhajs",
+"user_id":"170474f5030c487c93f59296d99b4def"
+}
+
+/// invoice_type ///
+
+// /api/create_invoice_type/
+{
+"target":"invoice_type",
+"action":"create",
+
+"total_money_type":5000,
+"amount":6,
+"invoice_type_id":12222,
+"invoice_id":13, // null if not related to any invoces
+"user_id": "sdsdf1231asdasd",
+"report_id":null // id of invoice_report if it related to the invoice report
+}
+
+
+// /api/edit_invoice_type/
+// request
+
+{
+"target":"invoice_type",
+
+"action":"edit",
+"unique_value":{
+    "invoice_type_code":"alsjfl234kj23kj143kkfhajs"
+},
+"total_money_type":5000,
+"amount":6,
+"invoice_type_id":12222,
+"invoice_id":13, // null if not related to any invoces
+"report_id":null // id of invoice_report if it related to the invoice report
+}
+
+
+// /api/delete_invoice_type/
+// request
+
+{
+"target":"invoice_type",
+
+"action":"delete",
+"key":"invoice_type_code",
+"value":"alsjfl234kj23kj143kkfhajs"
+}
+
+// /api/get_all_invoices_type/
+// request
+
+{
+"target":"invoice_type",
+
+"action":"get_all_invoices_type",
+"user_id":"170474f5030c487c93f59296d99b4def"
+}
+// /api/get_invoice_type/
+// request
+{
+"target":"invoice_type",
+
+"action":"get_invoice_type",
+"invoice_type_code":"0dae5287fdfb411fb8ff5ca6db331f43",
+"user_id":"170474f5030c487c93f59296d99b4def"
+}
+
+
+///// invoice report ///
+
+// /api/create_invoice_report/
+{
+"target":"invoice_report",
+"action":"create",
+"date":"2022-11-02",
+"report_type":"discount", // or addition
+"invoice_id":5,
+"notes":"hello",
+"invoice_types":[12,33,44,2], //get_specific_invoices_types
+"user_id":"170474f5030c487c93f59296d99b4def",
+}
+
+
+// /api/edit_invoice_report/
+// request
+
+{
+"target":"invoice_report",
+
+"action":"edit",
+"unique_value":{
+    "report_code":"alsjfl234kj23kj143kkfhajs"
+},
+"date":"2022-11-02",
+"report_type":"discount", // or addition
+"invoice_id":5,
+"notes":"hello",
+"invoice_types":[12,33,44,2],
+}
+
+
+// /api/delete_invoice_report/
+// request
+
+{
+"target":"invoice_report",
+
+"action":"delete",
+"key":"report_code",
+"value":"alsjfl234kj23kj143kkfhajs"
+}
+
+// /api/get_all_invoices_report/
+// request
+
+{
+"target":"invoice_report",
+
+"action":"get_all_invoices_report",
+"user_id":"170474f5030c487c93f59296d99b4def"
+}
+// /api/get_invoice_report/
+// request
+{
+"target":"invoice_report",
+
+"action":"get_invoice_report",
+"report_code":"alsjfl234kj23kj143kkfhajs",
+"user_id":"170474f5030c487c93f59296d99b4def"
+}
+
+/// License
+// /api/create_license/
+// request
+{
+    "target":"license",
+    "action":"create",
+    "user_id":"qqw12312313qwasdas",
+    "plan_name":"3months",
+}
+{
+    "target":"license",
+    "action":"delete",
+    "key":"license_id",
+    "value":"alsjfl234kj23kj143kkfhajs"
+}
+{
+    "target":"license",
+    "action":"get_license",
+    "license_id":"85948a08e8c145ea8ed2e773c39ca947"
+}
+{
+    "target":"license",
+    "action":"get_all_licenses"
+}
+
+/// plan
+// /api/create_license/
+// request
+{
+    "target":"plan",
+    "action":"create",
+    "plan_name":"3months",
+    "plan_duration":90, // in days
+}
+{
+    "target":"plan",
+    "action":"edit",
+    "unique_value":{
+        "plan_id":"hhjashdbajh687te4uuywgeg2384y"
+    },
+    "plan_name":"3months",
+    "plan_duration":90, // in days
+}
+
+{
+    "target":"plan",
+    "action":"delete",
+    "key":"plan_id",
+    "value":"hhjashdbajh687te4uuywgeg2384y",
+}
+{
+    "target":"plan",
+    "action":"get_plan",
+    "plan_id":"alsjfl234kj23kj143kkfhajs"
+}
+{
+    "target":"plan",
+    "action":"get_all_plans"
+}

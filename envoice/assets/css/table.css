@@ -1,0 +1,150 @@
+
+
+.main-table table tr th{
+    color: var(--main-color);
+    font-family: var(--font-family-bold);
+    font-size: 16px;
+}
+.main-table table tr{
+    vertical-align:middle;
+}
+.main-table table tr td{
+    font-family: var(--font-family-bold);
+    font-size:15px;
+}
+
+/***table ul actions**/
+.main-table table td ul{
+    list-style: none;
+    line-height: 0;
+    display: flex;    
+    padding:0;
+    margin:0;
+}
+.main-table table td ul li{
+   width: 35px;
+    height: 35px;
+    border-radius: 50% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-table table td ul li a {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+.main-table table td ul li:not(:last-child){
+    margin-left: 5px;
+}
+.main-table table td ul li .fa-edit{
+    background-color: var(--main-color);
+}
+.main-table table td ul li .fa-trash-alt{
+    background-color: var(--danger-color)
+}
+.main-table table td ul li button{
+    padding:0;
+}
+.main-table table td ul svg{
+    border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100% !important;
+    max-width:100% !important;
+    height:100%;
+    padding:8px;
+    color: var(--white-color);
+}
+
+/***table search and filter***/
+.main-table .dataTables_filter label{
+    width:100%;
+    margin-bottom:20px;
+    display: flex;
+    align-items: center;
+}
+.main-table .dataTables_filter label input{
+    width:25%;
+    margin-right: 5px;
+    height: 30px;
+    border-radius: 5px;
+}
+.main-table .dataTables_filter label input:focus{
+    outline:0 !important;
+    box-shadow: 0 0 0 !important;
+}
+.main-table .dataTables_length label , .main-table .dataTables_filter{
+    font-family: var(--font-family-regular);
+    font-size: 15px;
+}
+.main-table .dataTables_length{
+    margin-bottom: 25px;
+}
+/***table pagination***/
+.main-table .dataTables_paginate{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.main-table .dataTables_paginate .paginate_button{
+    padding: 15px;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    text-decoration: none;
+    margin: 2px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.main-table .dataTables_paginate span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.main-table .dataTables_paginate .paginate_button:hover{
+    background-color: var(--main-color);
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+
+/****print---and import buttons****/
+.main-table .table-actions{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.main-table .table-actions .btn{
+    color: var(--white-color)
+}
+.main-table .table-actions .btn:not(:last-child){
+    margin-left: 10px;
+}
+.main-table .table-actions .btn-print{
+    background-color: var(--orange-color);
+}
+.main-table .table-actions .btn-export{
+    background-color: var(--blue-color);
+}
+
+/***inner-tables no search no filter***/
+.main-table.inner-table{
+    margin-top:25px
+}
+.main-table.inner-table .table-actions{
+    margin-bottom:15px;
+}
+.main-table.inner-table .dataTables_length , 
+.main-table.inner-table .dataTables_filter , 
+.main-table.inner-table .dataTables_info,
+.main-table.inner-table .dataTables_paginate{
+    display: none !important;
+
+}

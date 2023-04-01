@@ -1,0 +1,21 @@
+.modal-content .modal-header .btn-close {
+        margin-left: 0 !important;
+}
+.modal-content .modal-header h5{
+    font-family: var(--font-family-bold);
+    color: var(--main-color);
+}
+.modal-content .form-floating>label{
+    font-family: var(--font-family-regular);
+    left: auto !important;
+    right: 0 ;
+}
+.modal-content  .form-select {
+    background-position: left 0.75rem center !important;
+}
+.modal-content .modal-buttons{
+    margin-top:20px;
+}
+.modal-content .modal-buttons button:not(:last-child){
+    margin-left:10px;
+}   
